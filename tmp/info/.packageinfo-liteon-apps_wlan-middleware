@@ -1,0 +1,19 @@
+Source-Makefile: package/liteon-apps/wlan-middleware/Makefile
+Package: wlan-middleware
+Submenu: Liteon Application
+Version: 9
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +nvram
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: wlan middleware lib
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description:  This package contains an utility to manipulate NVRAM on Broadcom based devices.
+ It works on bcm47xx (Linux 2.6) without using the kernel api.
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

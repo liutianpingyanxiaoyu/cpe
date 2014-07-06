@@ -1,0 +1,50 @@
+Source-Makefile: target/linux/atheros/Makefile
+Target: atheros
+Target-Board: atheros
+Target-Name: Atheros Solution
+Target-Path: /home/peterzhong/bruceliu/cpe
+Target-Arch: mips
+Target-Arch-Packages: atheros
+Target-Features: 
+Target-Depends: 
+Target-Optimization: -Os -pipe -mips32 -mtune=mips32 -fno-caller-saves
+Linux-Version: 
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images based on Atheros solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+Target: atheros/wr8401/wr8401_QCA9.2.0_U10.1020
+Target-Board: atheros
+Target-Name: wr8401_QCA9.2.0_U10.1020
+Target-Path: target/linux/atheros
+Target-Arch: mips
+Target-Arch-Packages: atheros
+Target-Features: pci targz ubifs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mips32 -mtune=mips32 -fno-caller-saves
+Linux-Version: 2.6.31_QCA9.2.0_U10.1020
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images based on Atheros solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+Target: atheros/wp838/wp838_QCA10.1.436
+Target-Board: atheros
+Target-Name: wp838_QCA10.1.436
+Target-Path: target/linux/atheros
+Target-Arch: mips
+Target-Arch-Packages: atheros
+Target-Features: display pci usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mips32 -mtune=mips32 -fno-caller-saves
+Linux-Version: 2.6.31
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images based on Atheros solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+

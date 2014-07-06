@@ -1,0 +1,21 @@
+Source-Makefile: package/version/Makefile
+Package: version
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Title: Version ID
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description: 	This package contains an utility to control product version id. 
+	$R means current version in subversion.
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+Config:
+	source "package/version/config/Config.in"
+@@
+
+

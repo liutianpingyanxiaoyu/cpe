@@ -1,0 +1,125 @@
+10
+
+dir
+12
+svn://192.168.1.17/trunk/cpe/package/busybox/config
+svn://192.168.1.17
+
+
+
+2014-05-17T01:39:21.519443Z
+2
+peter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e6ba6a40-ba65-43fd-b1f0-5c3b951f9f94
+
+selinux
+dir
+
+networking
+dir
+
+loginutils
+dir
+
+archival
+dir
+
+sysklogd
+dir
+
+modutils
+dir
+
+console-tools
+dir
+
+findutils
+dir
+
+runit
+dir
+
+mailutils
+dir
+
+init
+dir
+
+debianutils
+dir
+
+procps
+dir
+
+shell
+dir
+
+coreutils
+dir
+
+editors
+dir
+
+e2fsprogs
+dir
+
+libbb
+dir
+
+util-linux
+dir
+
+Config.in
+file
+
+
+
+
+2014-06-21T05:05:22.583041Z
+c8c6895dc6daaf2a930c4ecd6fe0d8d5
+2014-05-17T01:39:21.519443Z
+2
+peter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+27483
+
+miscutils
+dir
+
+printutils
+dir
+

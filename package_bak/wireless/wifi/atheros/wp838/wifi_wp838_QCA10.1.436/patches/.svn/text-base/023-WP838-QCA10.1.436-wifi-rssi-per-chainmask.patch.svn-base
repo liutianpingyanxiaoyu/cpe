@@ -1,0 +1,32 @@
+--- wifi_QCA_10.1.436-old/drivers/wlan_modules/os/linux/src/ieee80211_wireless.c	2014-06-04 17:23:59.632163282 -0700
++++ wifi_QCA_10.1.436/drivers/wlan_modules/os/linux/src/ieee80211_wireless.c	2014-06-07 06:40:19.418774083 -0700
+@@ -12643,9 +12643,26 @@ ieee80211_ioctl_getapinfo(struct net_dev
+ 
+     }
+ 
+-    sprintf(p + strlen(p), "Chain0 RSSI:%ddBm\n", rssi0);
+-    sprintf(p + strlen(p), "Chain1 RSSI:%ddBm\n", rssi1);
+-    sprintf(p + strlen(p), "Chain2 RSSI:%ddBm\n", rssi2);
++    switch(vap->iv_ic->ic_rx_chainmask)
++    {
++    case 1:
++        sprintf(p + strlen(p), "Chain0 RSSI:%ddBm\n", rssi0);
++        break;
++    case 3:
++        sprintf(p + strlen(p), "Chain0 RSSI:%ddBm\n", rssi0);
++        sprintf(p + strlen(p), "Chain1 RSSI:%ddBm\n", rssi1);
++        break;
++    case 5:
++        sprintf(p + strlen(p), "Chain0 RSSI:%ddBm\n", rssi0);
++        sprintf(p + strlen(p), "Chain1 RSSI:%ddBm\n", rssi2);
++        break;
++    case 7:
++    default:
++        sprintf(p + strlen(p), "Chain0 RSSI:%ddBm\n", rssi0);
++        sprintf(p + strlen(p), "Chain1 RSSI:%ddBm\n", rssi1);
++        sprintf(p + strlen(p), "Chain2 RSSI:%ddBm\n", rssi2);
++        break;
++    }
+ 
+     iwr->u.data.length = strlen(p);
+     error = _copy_to_user(iwr->u.data.pointer, p, iwr->u.data.length);

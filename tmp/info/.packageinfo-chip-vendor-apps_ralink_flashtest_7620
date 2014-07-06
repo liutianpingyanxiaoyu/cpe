@@ -1,0 +1,18 @@
+Source-Makefile: package/chip-vendor-apps/ralink/flashtest_7620/Makefile
+Package: flashtest_7620
+Submenu: Ralink Application
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ralink_wp688_wp688_MTK4110_130426
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: flashtest_7620
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description: 	flashtest_7620
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

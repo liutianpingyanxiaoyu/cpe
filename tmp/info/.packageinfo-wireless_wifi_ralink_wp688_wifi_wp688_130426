@@ -1,0 +1,19 @@
+Source-Makefile: package/wireless/wifi/ralink/wp688/wifi_wp688_130426/Makefile
+Package: kmod-wifi_wp688_130426
+Menu: 1
+Submenu: Wireless Drivers
+Version: <LINUX_VERSION>-
+Depends: @TARGET_ralink_wp688_wp688_MTK4110_130426
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Driver for wp688 wireless
+Maintainer: Liteon NABU BJRD PT <Sean@liteon.com>
+Source: mt7620_wifi2716_all_dpa_20130426.tar.bz2
+Type: ipkg
+Description:  This package contains a driver for wp688 Ralink wifi driver.
+Liteon NABU BJRD PT <Sean@liteon.com>
+@@
+
+

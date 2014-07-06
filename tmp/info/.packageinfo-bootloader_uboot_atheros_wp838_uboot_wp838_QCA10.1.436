@@ -1,0 +1,18 @@
+Source-Makefile: package/bootloader/uboot/atheros/wp838/uboot_wp838_QCA10.1.436/Makefile
+Package: uboot_wp838_QCA10.1.436
+Submenu: uboot
+Version: v0.2.5
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_atheros_wp838_wp838_QCA10_1_436
+Menu-Depends: 
+Provides: 
+Section: boot
+Category: Boot Loaders
+Title: U-Boot for target Atheros
+Maintainer: Liteon NABU BJRD PT <Sean@liteon.com>
+Source: u-boot-2006-04-06-1725.tar.bz2
+Type: ipkg
+Description:  This package contains an u-boot for WP838.
+Liteon NABU BJRD PT <Sean@liteon.com>
+@@
+
+

@@ -1,0 +1,59 @@
+Source-Makefile: package/udev/udev-106/Makefile
+Package: udev-106
+Submenu: udev
+Version: 106-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_freescale
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Title: Dynamic device management subsystem
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: udev-106.tar.bz2
+Type: ipkg
+Description:  udev provides a dynamic device directory containing only the files for 
+ actually present devices. It creates or removes device node files in 
+ the /dev directory, or it renames network interfaces.
+http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: udevtrigger
+Submenu: udev
+Version: 106-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_freescale
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Title: Small utility to request kernel devices events for coldplug
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: udev-106.tar.bz2
+Type: ipkg
+Description: Small utility to request kernel devices events for coldplug
+http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: udevextras
+Menu: 1
+Submenu: udev
+Version: 106-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_freescale
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Title: Utilities for udev scripts, for general device discovery
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: udev-106.tar.bz2
+Type: ipkg
+Description: Utilities for udev scripts, for general device discovery
+http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+Config:
+  source "package/udev/udev-106/udevextras-config.in"
+@@
+
+

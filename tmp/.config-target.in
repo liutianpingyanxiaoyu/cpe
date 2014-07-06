@@ -1,0 +1,268 @@
+choice
+	prompt "Target System"
+	default TARGET_ar71xx
+	reset if !DEVEL
+	
+config TARGET_atheros
+	bool "Atheros Solution"
+	select HAS_SUBTARGETS
+	select mips
+	help
+	  Build firmware images based on Atheros solution
+
+
+config TARGET_freescale
+	bool "Freescale Solution"
+	select HAS_SUBTARGETS
+	select powerpc
+	help
+	  Build firmware images based on Freescale solution
+
+
+config TARGET_ralink
+	bool "Ralink Solution"
+	select HAS_SUBTARGETS
+	select mipsel
+	help
+	  Build firmware images for Ralink MT7620 based boards.
+
+
+endchoice
+
+choice
+	prompt "Subtarget" if HAS_SUBTARGETS
+
+config TARGET_atheros_wr8401_wr8401_QCA9_2_0_U10_1020
+	bool "wr8401_QCA9.2.0_U10.1020"
+	select LINUX_2_6_31
+	depends TARGET_atheros
+	select PCI_SUPPORT
+	select USES_TARGZ
+	select USES_UBIFS
+	select USB_SUPPORT
+	select mips
+	help
+	  Build firmware images based on Atheros solution
+
+
+config TARGET_atheros_wp838_wp838_QCA10_1_436
+	bool "wp838_QCA10.1.436"
+	select LINUX_2_6_31
+	depends TARGET_atheros
+	select DISPLAY_SUPPORT
+	select PCI_SUPPORT
+	select USB_SUPPORT
+	select mips
+	help
+	  Build firmware images based on Atheros solution
+
+
+config TARGET_freescale_wp854_wp854_FSLp1020wlan101112
+	bool "wp854_FSLp1020wlan101112"
+	select LINUX_2_6_32
+	depends TARGET_freescale
+	select DISPLAY_SUPPORT
+	select PCI_SUPPORT
+	select PCI_SUPPORT
+	select PCIE_SUPPORT
+	select RTC_SUPPORT
+	select HAS_FPU
+	select HAS_SPE_FPU
+	select USES_SQUASHFS
+	select USES_TARGZ
+	select USB_SUPPORT
+	select powerpc
+	help
+	  Build firmware images based on Freescale solution
+
+
+config TARGET_ralink_wp688_wp688_MTK4110_130426
+	bool "wp688_4110_130426"
+	select LINUX_2_6_36
+	depends TARGET_ralink
+	select USES_SQUASHFS
+	select USB_SUPPORT
+	select mipsel
+	help
+	  Build firmware images for Ralink MT7620 based boards.
+
+
+endchoice
+
+choice
+	prompt "Target Profile"
+
+config TARGET_atheros_wr8401_wr8401_QCA9_2_0_U10_1020_Default
+	bool "Default"
+	depends TARGET_atheros_wr8401_wr8401_QCA9_2_0_U10_1020
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_hotplug2
+	select DEFAULT_iptables
+	select DEFAULT_kmod-ipt-nathelper
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_uci
+
+config TARGET_atheros_wp838_wp838_QCA10_1_436_Default
+	bool "Default"
+	depends TARGET_atheros_wp838_wp838_QCA10_1_436
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_hotplug2
+	select DEFAULT_iptables
+	select DEFAULT_kmod-ipt-nathelper
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_uci
+
+config TARGET_freescale_wp854_wp854_FSLp1020wlan101112_Default
+	bool "Default"
+	depends TARGET_freescale_wp854_wp854_FSLp1020wlan101112
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_hotplug2
+	select DEFAULT_iptables
+	select DEFAULT_kmod-ipt-nathelper
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_uci
+
+config TARGET_ralink_wp688_wp688_MTK4110_130426_Default
+	bool "Default"
+	depends TARGET_ralink_wp688_wp688_MTK4110_130426
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_hotplug2
+	select DEFAULT_iptables
+	select DEFAULT_kmod-ipt-nathelper
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_uci
+
+endchoice
+
+config HAS_SUBTARGETS
+	bool
+
+config TARGET_BOARD
+	string
+
+		default "atheros" if TARGET_atheros
+		default "freescale" if TARGET_freescale
+		default "ralink" if TARGET_ralink
+config TARGET_ARCH_PACKAGES
+	string
+	
+		default "atheros" if TARGET_atheros_wr8401_wr8401_QCA9_2_0_U10_1020
+		default "atheros" if TARGET_atheros_wp838_wp838_QCA10_1_436
+		default "freescale" if TARGET_freescale_wp854_wp854_FSLp1020wlan101112
+		default "ralink" if TARGET_ralink_wp688_wp688_MTK4110_130426
+
+config DEFAULT_TARGET_OPTIMIZATION
+	string
+	default "-Os -pipe -mips32 -mtune=mips32 -fno-caller-saves" if TARGET_atheros_wr8401_wr8401_QCA9_2_0_U10_1020
+	default "-Os -pipe -mips32 -mtune=mips32 -fno-caller-saves" if TARGET_atheros_wp838_wp838_QCA10_1_436
+	default "-O2 -pipe -fno-caller-saves -mcpu=8540" if TARGET_freescale_wp854_wp854_FSLp1020wlan101112
+	default "-Os -pipe -mips32r2 -mtune=mips32r2 -fno-caller-saves" if TARGET_ralink_wp688_wp688_MTK4110_130426
+	default "-Os -pipe -funit-at-a-time"
+
+config LINUX_ 
+	bool
+
+
+config LINUX_2_6_31
+	bool
+
+
+config LINUX_2_6_32
+	bool
+
+
+config LINUX_2_6_36
+	bool
+
+	config DEFAULT_base-files
+		bool
+
+	config DEFAULT_busybox
+		bool
+
+	config DEFAULT_dnsmasq
+		bool
+
+	config DEFAULT_dropbear
+		bool
+
+	config DEFAULT_firewall
+		bool
+
+	config DEFAULT_hotplug2
+		bool
+
+	config DEFAULT_iptables
+		bool
+
+	config DEFAULT_kmod-ipt-nathelper
+		bool
+
+	config DEFAULT_libc
+		bool
+
+	config DEFAULT_libgcc
+		bool
+
+	config DEFAULT_mtd
+		bool
+
+	config DEFAULT_netifd
+		bool
+
+	config DEFAULT_opkg
+		bool
+
+	config DEFAULT_ppp
+		bool
+
+	config DEFAULT_ppp-mod-pppoe
+		bool
+
+	config DEFAULT_uci
+		bool
+

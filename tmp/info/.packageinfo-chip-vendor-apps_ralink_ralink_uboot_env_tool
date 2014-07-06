@@ -1,0 +1,18 @@
+Source-Makefile: package/chip-vendor-apps/ralink/ralink_uboot_env_tool/Makefile
+Package: ralink_uboot_env_tool
+Submenu: Ralink Application
+Version: 0.1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ralink +zlib
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: read/modify U-Boot enviroment 
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description:  This package includes tools to read and modify Ralink U-Boot enviroment.
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

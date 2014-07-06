@@ -1,0 +1,8 @@
+---- get_sta_assoc_authmode Matches (7 in 4 files) ----
+Mid_detail.h (e:\cpe\wlan-middleware\src\include):int get_sta_assoc_authmode(int radio, int *auth_mode);
+Mid_detail_sta.c (e:\cpe\wlan-middleware\src\atheros):int get_sta_assoc_authmode(int radio, int *auth_mode, int *enc_type)
+Mid_detail_sta.c (e:\cpe\wlan-middleware\src\atheros):	ret += get_sta_assoc_authmode(radio, &(ap_info->auth_mode));
+Mid_detail_sta.c (e:\cpe\wlan-middleware\src\ralink)://int get_sta_assoc_authmode(int radio, int *auth_mode)
+Mid_detail_sta.c (e:\cpe\wlan-middleware\src\ralink):int get_sta_assoc_authmode(int radio, int *auth_mode)
+Wps.c (src):		ret = get_sta_assoc_authmode(RADIO_5G, &auth_mode);
+Wps.c (src):		ret = get_sta_assoc_authmode(RADIO_2G, &auth_mode);

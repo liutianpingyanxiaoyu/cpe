@@ -1,0 +1,17 @@
+Source-Makefile: package/mtd_write/Makefile
+Package: mtd_write
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: mtd_write
+Category: Network
+Title: mtd_write - mtd_write daemon.
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description: 	mtd_write program.
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

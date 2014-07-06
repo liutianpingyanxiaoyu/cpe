@@ -1,0 +1,21 @@
+Source-Makefile: package/liteon-apps/reset_button/Makefile
+Package: reset_button
+Submenu: Liteon Application
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: reset_button
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description: 	reset_button	
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+Config:
+source "package/liteon-apps/reset_button/Config.in"
+@@
+
+

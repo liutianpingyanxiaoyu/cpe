@@ -1,0 +1,24 @@
+Source-Makefile: package/wireless/wifi/atheros/wr8401/wifi_wr8401_QCA9.2.0_U10.1020/Makefile
+Package: kmod-wifi_wr8401_QCA9.2.0_U10.1020
+Menu: 1
+Submenu: Wireless Drivers
+Version: <LINUX_VERSION>-
+Depends: @TARGET_atheros_wr8401_wr8401_QCA9_2_0_U10_1020 +wireless-tools @PCI_SUPPORT @(!(TARGET_avr32||TARGET_cobalt||TARGET_ep93xx||TARGET_etrax||TARGET_octeon||TARGET_pxcab||TARGET_sibyte||LINUX_3_1||LINUX_3_2)||BROKEN) +@DRIVER_WEXT_SUPPORT 
+Menu-Depends: 
+Provides: 
+Build-Depends: wprobe
+Section: kernel
+Category: Kernel modules
+Title: Driver for wr8401 wifi
+Maintainer: Liteon NABU BJRD PT <Sean@liteon.com>
+Source: wifi_QCA9.2.0_U10.1020.tar.bz2
+Type: ipkg
+Description:  This package contains a driver for wr8401 based on atheros wifi chipsets.
+http://madwifi-project.org/
+Liteon NABU BJRD PT <Sean@liteon.com>
+@@
+Config:
+	source "package/wireless/wifi/atheros/wr8401/wifi_wr8401_QCA9.2.0_U10.1020/Config.in"
+@@
+
+

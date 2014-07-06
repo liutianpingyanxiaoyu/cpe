@@ -1,0 +1,34 @@
+Source-Makefile: target/linux/freescale/Makefile
+Target: freescale
+Target-Board: freescale
+Target-Name: Freescale Solution
+Target-Path: /home/peterzhong/bruceliu/cpe
+Target-Arch: powerpc
+Target-Arch-Packages: freescale
+Target-Features: 
+Target-Depends: 
+Target-Optimization: -O2 -pipe -fno-caller-saves -mcpu=8540
+Linux-Version: 
+Linux-Release: 1
+Linux-Kernel-Arch: powerpc
+Target-Description:
+	Build firmware images based on Freescale solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+Target: freescale/wp854/wp854_FSLp1020wlan101112
+Target-Board: freescale
+Target-Name: wp854_FSLp1020wlan101112
+Target-Path: target/linux/freescale
+Target-Arch: powerpc
+Target-Arch-Packages: freescale
+Target-Features: display pci pcie rtc spe_fpu squashfs targz usb
+Target-Depends: 
+Target-Optimization: -O2 -pipe -fno-caller-saves -mcpu=8540
+Linux-Version: 2.6.32.6_FSLp1020wlan101112
+Linux-Release: 1
+Linux-Kernel-Arch: powerpc
+Target-Description:
+	Build firmware images based on Freescale solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+

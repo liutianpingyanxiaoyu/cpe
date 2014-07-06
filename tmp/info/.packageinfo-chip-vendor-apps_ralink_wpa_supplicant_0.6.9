@@ -1,0 +1,36 @@
+Source-Makefile: package/chip-vendor-apps/ralink/wpa_supplicant_0.6.9/Makefile
+Package: wpa-supplicant-0.6.9
+Version: 0.6.9-2
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libopenssl @TARGET_ralink
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: WPA Supplicant
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: wpa_supplicant-0.6.9.tar.bz2
+Type: ipkg
+Description: WPA Supplicant
+http://hostap.epitest.fi/wpa_supplicant/
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+Config:
+	source "package/chip-vendor-apps/ralink/wpa_supplicant_0.6.9/Config.in"	
+@@
+
+Package: wpa-cli-0.6.9
+Version: 0.6.9-2
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread wpa-supplicant-0.6.9
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: WPA Supplicant command line interface
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: wpa_supplicant-0.6.9.tar.bz2
+Type: ipkg
+Description: WPA Supplicant command line interface
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

@@ -1,0 +1,21 @@
+Source-Makefile: package/bootloader/uboot/freescale/wp854/uboot_wp854_FSLp1020wlan101112/Makefile
+Package: uboot_wp854_FSLp1020wlan101112
+Submenu: uboot
+Default: y if (CONFIG_TARGET_freescale_Default)
+Version: v0.1.1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_freescale_wp854_wp854_FSLp1020wlan101112
+Menu-Depends: 
+Provides: 
+Build-Variant: P1020SKU
+Section: boot
+Category: Boot Loaders
+Title: U-boot for the p1020wlan or p1011wlan
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: uboot_FSLP1020wlan_20101112.tar.bz2
+Type: ipkg
+Description: U-boot for the p1020wlan or p1011wlan
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

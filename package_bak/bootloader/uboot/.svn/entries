@@ -1,0 +1,40 @@
+10
+
+dir
+12
+svn://192.168.1.17/trunk/cpe/package/bootloader/uboot
+svn://192.168.1.17
+
+
+
+2014-05-24T22:14:21.990336Z
+5
+peter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e6ba6a40-ba65-43fd-b1f0-5c3b951f9f94
+
+atheros
+dir
+
+freescale
+dir
+
+ralink
+dir
+
+cavium
+dir
+

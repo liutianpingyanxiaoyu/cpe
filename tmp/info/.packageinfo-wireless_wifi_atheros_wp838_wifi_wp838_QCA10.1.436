@@ -1,0 +1,21 @@
+Source-Makefile: package/wireless/wifi/atheros/wp838/wifi_wp838_QCA10.1.436/Makefile
+Package: kmod-wifi_wp838_QCA_10.1.436
+Menu: 1
+Submenu: Wireless Drivers
+Version: <LINUX_VERSION>-
+Depends: @TARGET_atheros_wp838_wp838_QCA10_1_436 +wireless-tools @PCI_SUPPORT @(!(TARGET_avr32||TARGET_cobalt||TARGET_ep93xx||TARGET_etrax||TARGET_octeon||TARGET_pxcab||TARGET_sibyte||LINUX_3_1||LINUX_3_2)||BROKEN) +@DRIVER_WEXT_SUPPORT 
+Menu-Depends: 
+Provides: 
+Build-Depends: wprobe
+Section: kernel
+Category: Kernel modules
+Title: Driver for WP838's WiFi
+Maintainer: Liteon NABU BJRD PT <Sean@liteon.com>
+Source: wifi_QCA_10.1.436.tar.bz2
+Type: ipkg
+Description:  This package contains a driver for WP838 based on atheros wifi chipsets.
+http://madwifi-project.org/
+Liteon NABU BJRD PT <Sean@liteon.com>
+@@
+
+

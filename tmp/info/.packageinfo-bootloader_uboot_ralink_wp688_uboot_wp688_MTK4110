@@ -1,0 +1,18 @@
+Source-Makefile: package/bootloader/uboot/ralink/wp688/uboot_wp688_MTK4110/Makefile
+Package: uboot_wp688_MTK4110
+Submenu: uboot
+Version: v0.1.3
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ralink
+Menu-Depends: 
+Provides: 
+Section: boot
+Category: Boot Loaders
+Title: U-Boot in SDK4110 for target MT7620
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: uboot_MTK4110.tar.bz2
+Type: ipkg
+Description:  This package contains an u-boot version 4110 for all platform
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

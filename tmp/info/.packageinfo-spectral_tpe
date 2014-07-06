@@ -1,0 +1,17 @@
+Source-Makefile: package/spectral_tpe/Makefile
+Package: spectral_tpe
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @PACKAGE_kmod-wifi_wp838_QCA_10.1.436
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Base system
+Title: spectral from tpe
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description:  This package contains an spectral utilities.
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

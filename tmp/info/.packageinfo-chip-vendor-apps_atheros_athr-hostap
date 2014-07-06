@@ -1,0 +1,18 @@
+Source-Makefile: package/chip-vendor-apps/atheros/athr-hostap/Makefile
+Package: athr-hostap
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_atheros +wifi_wp838_QCA10.1.436
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: IEEE 802.1x Authenticator(Atheros)
+Maintainer: Liteon NABU BJRD PT <SeanXKong@liteon.com>
+Source: athr-hostap.tar.bz2
+Type: ipkg
+Description: 	This package contains a full featured IEEE 802.1x/WPA/EAP/RADIUS
+	Authenticator.
+Liteon NABU BJRD PT <SeanXKong@liteon.com>
+@@
+
+

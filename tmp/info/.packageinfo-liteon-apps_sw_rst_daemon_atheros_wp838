@@ -1,0 +1,18 @@
+Source-Makefile: package/liteon-apps/sw_rst_daemon/atheros/wp838/Makefile
+Package: sw_rst_daemon
+Submenu: Liteon Application
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_atheros_wp838_wp838_QCA10_1_436
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: sw_rst_daemon
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description: 	sw_rst_daemon	
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

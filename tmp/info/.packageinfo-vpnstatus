@@ -1,0 +1,17 @@
+Source-Makefile: package/vpnstatus/Makefile
+Package: vpnstatus
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread nvram
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: VPN status updater
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description: 	Command Line Interface.
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

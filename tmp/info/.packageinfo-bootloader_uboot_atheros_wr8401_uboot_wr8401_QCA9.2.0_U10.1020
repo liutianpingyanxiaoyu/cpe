@@ -1,0 +1,18 @@
+Source-Makefile: package/bootloader/uboot/atheros/wr8401/uboot_wr8401_QCA9.2.0_U10.1020/Makefile
+Package: uboot_wr8401_QCA9.2.0_U10.1020
+Submenu: uboot
+Version: v0.1.1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_atheros_wr8401_wr8401_QCA9_2_0_U10_1020
+Menu-Depends: 
+Provides: 
+Section: boot
+Category: Boot Loaders
+Title: U-Boot for target Atheros
+Maintainer: Liteon NABU BJRD PT <Sean@liteon.com>
+Source: uboot_QCA9.2.0_U10.1020.tar.bz2
+Type: ipkg
+Description:  This package contains an u-boot for wr8401.
+Liteon NABU BJRD PT <Sean@liteon.com>
+@@
+
+

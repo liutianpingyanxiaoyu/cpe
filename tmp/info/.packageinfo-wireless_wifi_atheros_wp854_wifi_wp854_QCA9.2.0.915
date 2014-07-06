@@ -1,0 +1,24 @@
+Source-Makefile: package/wireless/wifi/atheros/wp854/wifi_wp854_QCA9.2.0.915/Makefile
+Package: kmod-wifi_wp854_QCA9.2.0.915
+Menu: 1
+Submenu: Wireless Drivers
+Version: <LINUX_VERSION>-
+Depends: @TARGET_freescale_wp854_wp854_FSLp1020wlan101112 +wireless-tools @PCI_SUPPORT  @(!(TARGET_avr32||TARGET_cobalt||TARGET_ep93xx||TARGET_etrax||TARGET_octeon||TARGET_pxcab||TARGET_sibyte||LINUX_3_1||LINUX_3_2)||BROKEN) +@DRIVER_WEXT_SUPPORT
+Menu-Depends: 
+Provides: 
+Build-Depends: wprobe
+Section: kernel
+Category: Kernel modules
+Title: Driver for wp854 wifi
+Maintainer: Liteon NABU BJRD PT <Daniel@liteon.com>
+Source: wifi_QCA9.2.0.915.tar.bz2
+Type: ipkg
+Description:  This package contains a driver for wp854.
+http://madwifi-project.org/
+Liteon NABU BJRD PT <Daniel@liteon.com>
+@@
+Config:
+	source "package/wireless/wifi/atheros/wp854/wifi_wp854_QCA9.2.0.915/Config.in"
+@@
+
+

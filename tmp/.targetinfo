@@ -1,0 +1,118 @@
+Source-Makefile: target/linux/atheros/Makefile
+Target: atheros
+Target-Board: atheros
+Target-Name: Atheros Solution
+Target-Path: /home/peterzhong/bruceliu/cpe
+Target-Arch: mips
+Target-Arch-Packages: atheros
+Target-Features: 
+Target-Depends: 
+Target-Optimization: -Os -pipe -mips32 -mtune=mips32 -fno-caller-saves
+Linux-Version: 
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images based on Atheros solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+Target: atheros/wr8401/wr8401_QCA9.2.0_U10.1020
+Target-Board: atheros
+Target-Name: wr8401_QCA9.2.0_U10.1020
+Target-Path: target/linux/atheros
+Target-Arch: mips
+Target-Arch-Packages: atheros
+Target-Features: pci targz ubifs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mips32 -mtune=mips32 -fno-caller-saves
+Linux-Version: 2.6.31_QCA9.2.0_U10.1020
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images based on Atheros solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+Target: atheros/wp838/wp838_QCA10.1.436
+Target-Board: atheros
+Target-Name: wp838_QCA10.1.436
+Target-Path: target/linux/atheros
+Target-Arch: mips
+Target-Arch-Packages: atheros
+Target-Features: display pci usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mips32 -mtune=mips32 -fno-caller-saves
+Linux-Version: 2.6.31
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images based on Atheros solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+
+Source-Makefile: target/linux/freescale/Makefile
+Target: freescale
+Target-Board: freescale
+Target-Name: Freescale Solution
+Target-Path: /home/peterzhong/bruceliu/cpe
+Target-Arch: powerpc
+Target-Arch-Packages: freescale
+Target-Features: 
+Target-Depends: 
+Target-Optimization: -O2 -pipe -fno-caller-saves -mcpu=8540
+Linux-Version: 
+Linux-Release: 1
+Linux-Kernel-Arch: powerpc
+Target-Description:
+	Build firmware images based on Freescale solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+Target: freescale/wp854/wp854_FSLp1020wlan101112
+Target-Board: freescale
+Target-Name: wp854_FSLp1020wlan101112
+Target-Path: target/linux/freescale
+Target-Arch: powerpc
+Target-Arch-Packages: freescale
+Target-Features: display pci pcie rtc spe_fpu squashfs targz usb
+Target-Depends: 
+Target-Optimization: -O2 -pipe -fno-caller-saves -mcpu=8540
+Linux-Version: 2.6.32.6_FSLp1020wlan101112
+Linux-Release: 1
+Linux-Kernel-Arch: powerpc
+Target-Description:
+	Build firmware images based on Freescale solution
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+
+Source-Makefile: target/linux/ralink/Makefile
+Target: ralink
+Target-Board: ralink
+Target-Name: Ralink Solution
+Target-Path: /home/peterzhong/bruceliu/cpe
+Target-Arch: mipsel
+Target-Arch-Packages: ralink
+Target-Features: 
+Target-Depends: 
+Target-Optimization: -Os -pipe -mips32r2 -mtune=mips32r2 -fno-caller-saves
+Linux-Version: 
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for Ralink MT7620 based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+Target: ralink/wp688/wp688_MTK4110_130426
+Target-Board: ralink
+Target-Name: wp688_4110_130426
+Target-Path: target/linux/ralink
+Target-Arch: mipsel
+Target-Arch-Packages: ralink
+Target-Features: squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mips32r2 -mtune=mips32r2 -fno-caller-saves
+Linux-Version: 2.6.36_MTK4110
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for Ralink MT7620 based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall 
+
